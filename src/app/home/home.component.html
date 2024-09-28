@@ -1,1 +1,201 @@
-<p>home works!</p>
+<app-navbar></app-navbar>
+
+<div class="">
+
+
+    <div class="banner" data-aos="fade-up" data-aos-easing="ease-in-out">
+        <div class="content" >
+            <h1 class="mb-3" style="font-weight: bold;" data-aos="fade-up" data-aos-easing="ease-in-out">All FOR YOUR HOME</h1>
+            <div class="rando"  data-aos="fade-up" data-aos-easing="ease-in-out">
+                <p style=" font-size: 16px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto labore quaerat minima eius sit, nihil rem esse cupiditate. Asperiores, veniam!Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <!-- <a routerLink="/menu">ORDER NOW <i class="bi bi-arrow-right"></i></a> -->
+            <!-- <button type="button" class="btn btn-origin" routerLink="">ORDER NOW <i class="bi bi-arrow-right"></i></button> -->
+             <div class="explore-btn" style="margin-top: 1.5rem;">
+                <a href="#" class="exp" routerLink="/collections">View More <i class="bi bi-caret-right"></i></a>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="container mt-5 mb-3">
+        <div class="row">
+            <div class="hometextcontainer" data-aos="fade-up" data-aos-easing="ease-in-out">
+                <p class="bigtext">PRODUCTS OF THE WEEK</p>
+                <p class="smalltext">Lorem ipemporibus aliquid vitae culpa, quaerat eveniet! Officia sapiente tempora porro voluptates in? Architecto, voluptatum. Culpa, et!</p>
+            </div>
+
+            <div class="col-lg-4 mt-5 product" *ngFor="let data of getCollectionData; index as i" data-aos="zoom-in" data-aos-easing="ease-in-out">
+                <a [routerLink]="['/product-detail',data.pdCategory,data.pdId]" class="productLink">
+                  <div class="product-grid" *ngIf="i<=3">
+                    <div>
+                      <img src={{data.img}} alt="">
+                    </div>
+                    <h4 class="menutext">{{data.name}}</h4>  
+                    <p class="smalltext" style="font-size: 14px;">${{data.price}}.00</p> 
+                  </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="banner-about d-flex align-items-center justify-content-center">
+        <div class="bg-text" >
+            <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto labore quaerat minima eius sit, nihil rem esse cupiditate. Asperiores, veniam!Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            <div class="explore-btn" style="margin-top: 1.5rem;">
+                <a href="#" class="exp" routerLink="/collections">View More <i class="bi bi-caret-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video #backgroundVideo autoplay muted loop>
+          <source src="../../assets/2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      
+        <div class="video-buttons">
+          <button *ngIf="!isPlaying" (click)="playVideo()" class="btn btn-light"><i class="bi bi-play-fill"></i></button>
+          <button *ngIf="isPlaying" (click)="pauseVideo()" class="btn btn-light"><i class="bi bi-pause-fill"></i></button>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-3">
+        <div class="row">
+            
+            <div class="col-lg-6 col-12 mt-5" style="align-content: center; text-align: center;" data-aos="fade-up" data-aos-easing="ease-in-out">
+                <h4 style="font-size: 2.5rem;font-weight: 700; margin-bottom: 15px;">STYLISH CHAIRS</h4> 
+                <p class="smalltext" style="width: 100%;">Lorem ipemporibus aliquid vitae culpa, quaerat eveniet! Officia sapiente tempora porro voluptates in? Architecto, voluptatum. Culpa, et!ro voluptates in? Architecto, voluptatum. Culpa, et!</p>
+
+                <div class="explore-btn" style="margin-top: 1.5rem">
+                    <a href="#" class="exp" style=" border: 1px solid black; color: black;" routerLink="/collections">View More <i class="bi bi-caret-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12 mt-5 joltImg" data-aos="zoom-in" data-aos-easing="ease-in-out">
+                <img src="../../assets/ma-s2.png" alt="" >
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-3">
+        <div class="row">
+
+            <div class="col-lg-6 col-12 mt-5 joltImg" data-aos="zoom-in" data-aos-easing="ease-in-out">
+                <img src="../../assets/ma-s3.png" alt="" >
+            </div>
+            
+            <div class="col-lg-6 col-12 mt-5" style="align-content: center; text-align: center;" data-aos="fade-up" data-aos-easing="ease-in-out">
+                <h4 style="font-size: 2.5rem;font-weight: 700; margin-bottom: 15px;">TABLES</h4> 
+                <p class="smalltext" style="width: 100%;">Lorem ipemporibus aliquid vitae culpa, quaerat eveniet! Officia sapiente tempora porro voluptates in? Architecto, voluptatum. Culpa, et!ro voluptates in? Architecto, voluptatum. Culpa, et!</p>
+
+                <div class="explore-btn" style="margin-top: 1.5rem">
+                    <a href="#" class="exp" style=" border: 1px solid black; color: black;" routerLink="/collections">View More <i class="bi bi-caret-right"></i></a>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            
+            <div class="col-lg-6 col-12 mt-5" style="align-content: center; text-align: center;" data-aos="fade-up" data-aos-easing="ease-in-out">
+                <h4 style="font-size: 2.5rem;font-weight: 700; margin-bottom: 15px;">CONTEMPORARY LAMPS</h4> 
+                <p class="smalltext" style="width: 100%;">Lorem ipemporibus aliquid vitae culpa, quaerat eveniet! Officia sapiente tempora porro voluptates in? Architecto, voluptatum. Culpa, et!ro voluptates in? Architecto, voluptatum. Culpa, et!</p>
+
+                <div class="explore-btn" style="margin-top: 1.5rem">
+                    <a href="#" class="exp" style=" border: 1px solid black; color: black;" routerLink="/collections">View More <i class="bi bi-caret-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-12 mt-5 joltImg" data-aos="zoom-in" data-aos-easing="ease-in-out">
+                <img src="../../assets/ma-s4.png" alt="" >
+            </div>
+        </div>
+    </div>
+
+
+    <div class="mt-5 mb-3" style="background: #EFEFEF;padding: 5rem 0;">
+        <div class="news gap-3">
+            <h4>order now for an <b>express delivery in 24h !</b></h4>
+            <div class="explore-btn" >
+                    <a href="#" class="exp" style=" border: 1px solid black; color: black;" routerLink="/collections">View More <i class="bi bi-caret-right"></i></a>
+                </div>
+        </div>
+    </div>
+
+
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            
+            <div class="col-lg-6 col-12 mt-5 joltImg " style="text-align: center;" data-aos="zoom-in" data-aos-easing="ease-in-out">
+                <img src="../../assets/ma-s5.png" alt="" style="object-fit: cover;">
+                <p class="smalltext mt-2" >25th sep,2024 / by mideee</p>
+                <p style="width: 100%; font-size: 20px; font-weight: 600;">Your office should have only <br> natural materials</p>
+            </div>
+
+            <div class="col-lg-6 col-12 mt-5 joltImg" style="text-align: center;" data-aos="zoom-in" data-aos-easing="ease-in-out">
+                <img src="../../assets/ma-s6.png" alt="" style="object-fit: cover;">
+                <p class="smalltext mt-2" >29 sep,2022 / by mideeee</p>
+                <p style="width: 100%; font-size: 20px; font-weight: 600;">Your office should have only <br> natural materials</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="carouselExampleIndicators" style="height: 50vh; background: #EFEFEF; margin-bottom: 2rem; " class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- <img src="../../assets/ab1.png" class="d-block w-100" alt="..."> -->
+             <div class="d-block w-100 d-flex flex-column align-items-center justify-content-center mt-5 " style="color: black;">
+                <img src="../../assets/comm.png" alt="" style="margin-bottom: 1.5rem;">
+                <p style="text-align: center; width: 90%;" class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Tellus vitae congue id ipsum sed neque et dui accumsan. Nibh semper magna facilisi ridiculus luctus amet. Aliquam </p>
+                <p style=" font-size: 20px; font-weight: 600;">Ogomide Mideee</p>
+                <p>Team Lead</p>
+             </div>
+            
+            
+          </div>
+          <div class="carousel-item">
+            <div class="d-block w-100 d-flex flex-column align-items-center justify-content-center mt-5 " style="color: black;">
+                <img src="../../assets/comm.png" alt="" style="margin-bottom: 1.5rem;">
+                <p style="text-align: center; width: 90%;" class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Tellus vitae congue id ipsum sed neque et dui accumsan. Nibh semper magna facilisi ridiculus luctus amet. Aliquam </p>
+                <p style=" font-size: 20px; font-weight: 600;">Ogomide Mideee</p>
+                <p>Designer</p>
+             </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-block w-100 d-flex flex-column align-items-center justify-content-center mt-5 " style="color: black;">
+                <img src="../../assets/comm.png" alt="" style="margin-bottom: 1.5rem;">
+                <p style="text-align: center; width: 90%;" class="smalltext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Tellus vitae congue id ipsum sed neque et dui accumsan. Nibh semper magna facilisi ridiculus luctus amet. Aliquam </p>
+                <p style=" font-size: 20px; font-weight: 600;">Ogomide Mideee</p>
+                <p>Product Manager</p>
+             </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev text-dark" style="color: black;" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span style="color: black;" class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span style="color: black;" class="visually-hidden">Previous</span>
+        </button>
+        <button  class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      
+
+    
+    
+</div>
