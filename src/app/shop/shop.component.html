@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+
+<button class="toggle-btn mt-5" (click)="toggleSidebar()">☰</button>
+
+<div class="container mt-5 mb-3">
+    <!-- Body  -->
+    <div class="row main-content">
+
+        <div class="hometextcontainer" data-aos="fade-up" data-aos-easing="ease-in-out">
+            
+        </div>
+        <p class="smalltext">Showing 1-9 of 57 results</p>
+        <div class="col-lg-4 mt-5 product " *ngFor="let data of filteredProducts;index as i" data-aos="zoom-in"
+            data-aos-easing="ease-in-out">
+            
+            <a [routerLink]="['/product-detail',data.pdCategory,data.pdId]" class="productLink">
+                <div class="product-grid ">
+                    <div>
+                        <img src={{data.pdImg}} alt="">
+                    </div>
+                    <h4 class="menutext">{{data.pdName}}</h4>
+                    <div>
+                        <img src="../../assets/star.png" style="width: 80px; height: 20px;" alt="">
+                    </div>
+                    <h4 class="pricetext">${{data.pdPrice}}</h4>
+
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- SIDE BAR  -->
+    <div class="sidebar mt-5" [class.active]="isSidebarVisible">
+
+        <div class="mb-3" data-aos="fade-up" data-aos-easing="ease-in-out">
+            <input type="email" class="form-control" placeholder="search" aria-label="email" aria-describedby="basic-addon1">
+            
+          </div>
+
+        <div class="">
+            <h3 class="menutext">Category</h3>
+        <div>
+            <input type="checkbox" [checked]="allCategoriesSelected" (change)="onSelectAllCategories($event)">
+            <label >All Categories</label>
+        </div>
+
+        <!-- Individual Category Checkboxes -->
+        <div *ngFor="let category of categories"  style="font-size: 13px;">
+            <input type="checkbox" [value]="category" [checked]="selectedCheckboxCategories.includes(category)"
+                (change)="onCategoryCheckboxChange($event)">
+            <label>{{ category }}</label>
+        </div>
+        </div>
+
+        <div class="mt-3"  style="font-size: 13px;" >
+            <!--  color Checkboxes Filter for Categories -->
+            <h3 class="menutext">Color</h3>
+            <div *ngFor="let category of colors">
+                <input type="checkbox" [value]="category" (change)="onCategoryColorboxChange($event)">
+                <label >{{ category }}</label>
+            </div>
+        </div>
+
+        <!-- Price Range Slider -->
+        <div class="mt-5">
+            <!-- <h3 class="menutext">Color</h3> -->
+        <div>
+            <ng5-slider style="color: purple" [(value)]="minPrice" [(highValue)]="maxPrice"
+                [options]="priceSliderOptions" (valueChange)="onPriceChange()"
+                (highValueChange)="onPriceChange()"></ng5-slider>
+        </div>
+        </div>
+
+    </div>
+</div>

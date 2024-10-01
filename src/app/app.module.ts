@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { BlogComponent } from './blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
+import { ShopComponent } from './shop/shop.component';
+import { Ng5SliderModule } from 'ng5-slider';
 
 
 @NgModule({
@@ -16,11 +18,13 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     BlogComponent,
     FooterComponent,
+    ShopComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    Ng5SliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
