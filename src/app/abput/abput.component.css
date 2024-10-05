@@ -1,0 +1,19 @@
+.banner
+{
+    background-image: url('../../assets/ma-home.png');
+    height: 80vh; /* Full viewport height */
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.content
+{
+    top: 50%;
+    /* bottom: 10%; */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+}

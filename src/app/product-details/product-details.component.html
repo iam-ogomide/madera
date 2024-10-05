@@ -1,0 +1,104 @@
+<app-navbar></app-navbar>
+<div class="container mt-5 mb-3">
+    <div class="row">
+
+        <div class="col-lg-2 col-12 mt-5 jolt"  data-aos="zoom-in" data-aos-easing="ease-in-out">
+            <div class="">
+                <img src={{getProductDetails.pdImg}} alt="">
+            </div>
+            <div class="">
+                <img src={{getProductDetails.pdImg}} alt="">
+            </div>
+            <div class="">
+                <img src={{getProductDetails.pdImg}} alt="">
+            </div>
+            <div class="">
+                <img src={{getProductDetails.pdImg}} alt="">
+            </div>
+        </div>
+
+        <div class="col-lg-6 col-12 mt-5 joltImg" style="display: flex; flex-direction: column;" data-aos="zoom-in" data-aos-easing="ease-in-out">
+            <div class="">
+                <img src={{getProductDetails.pdImg}} alt="">
+            </div>
+            
+        </div>
+        
+        <div class="col-lg-4 col-12 mt-5" >
+            <h4 style="font-size: 1.5rem;font-weight: 700; margin-bottom: 15px;" data-aos="fade-up" data-aos-easing="ease-in-out">{{getProductDetails.pdName}}</h4> 
+            <div>
+                <img src="../../assets/star.png" style="width: 12s0px; height: 20px;" alt="">
+            </div>
+            <p style="color: gray; font-size: 14px;line-height: 1.5rem; margin-top: 0.5rem; font-weight: bold;" data-aos="fade-up" data-aos-easing="ease-in-out">${{getProductDetails.pdPrice | number}}.00</p>
+            <p style="color: gray; font-size: 14px;line-height: 1.5rem;" data-aos="fade-up" data-aos-easing="ease-in-out">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolore porro harum, ea praesentium laboriosam recusandae molestias eos! Magnam rem aut hic dolore exercitationem quibusdam quo culpa vero dicta? Voluptatum.</p>
+
+
+            <div class="btn-contain mb-3">
+
+                <div class="expo" style="">
+                    <i class="bi bi-caret-left-fill" (click)="decrement()"></i>
+                    <span>{{ count }}</span>
+                    <i class="bi bi-caret-right-fill" (click)="increment()"></i>
+                </div>
+
+                <div class="explore-btn" style="margin-left: 1rem;">
+                    <a href="#" class="exp" routerLink="/collections">Add to cart</a>
+                </div>
+
+
+            </div>
+
+            <p style="color: gray; font-size: 14px;line-height: 1.5rem; margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out"><i class="bi bi-truck"></i> Add to wishlist</p>
+
+            <p style="color: gray; font-size: 14px;line-height: 1.5rem; margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out">Sku: 02</p>
+
+            <p style="color: gray; font-size: 14px;line-height: 1.5rem; margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out">Category : {{getProductDetails.pdCategory}}</p>
+
+            <p style="color: gray; font-size: 14px;line-height: 1.5rem; margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out">tags: sofa clean</p>
+
+
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Additional Information</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Preview</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <p style="color: gray; font-size: 14px;line-height: 1.5rem;margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolore porro harum, ea praesentium laboriosam recusandae molestias eos! Magnam rem aut hic dolore exercitationem quibusdam quo culpa vero dicta? Voluptatum.</p>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <p style="color: gray; font-size: 14px;line-height: 1.5rem;margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolore porro harum, ea praesentium laboriosam recusandae molestias eos! Magnam rem aut hic dolore exercitationem quibusdam quo culpa vero dicta? Voluptatum.</p>
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                    <p style="color: gray; font-size: 14px;line-height: 1.5rem;margin-top: 1rem;" data-aos="fade-up" data-aos-easing="ease-in-out">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque dolore porro harum, ea praesentium laboriosam recusandae molestias eos! Magnam rem aut hic dolore exercitationem quibusdam quo culpa vero dicta? Voluptatum.</p>
+                </div>
+              </div>
+              
+            
+        </div>
+
+        
+    </div>
+
+    <div class="row mt-5">
+        <h4 class="menutext" style="font-size: 1.5rem;">Related Products</h4>  
+        <div class="col-lg-3 mt-3 product" *ngFor="let data of getCollectionData; index as i" data-aos="zoom-in" data-aos-easing="ease-in-out">
+            <a class="productLink">
+              <div class="product-grid" style="align-items: center; justify-content: center; display: flex; flex-direction: column;" *ngIf="i<=3">
+                <div>
+                  <img src={{data.pdImg}} alt="">
+                </div>
+                <h4 class="menutext">{{data.pdName}}</h4>  
+                <div>
+                    <img src="../../assets/star.png" style="width: 80px; height: 20px;" alt="">
+                </div>
+              </div>
+            </a>
+    </div>
+</div>

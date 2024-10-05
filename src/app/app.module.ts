@@ -9,6 +9,8 @@ import { BlogComponent } from './blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
 import { ShopComponent } from './shop/shop.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AbputComponent } from './abput/abput.component';
 
 
 @NgModule({
@@ -19,6 +21,8 @@ import { Ng5SliderModule } from 'ng5-slider';
     BlogComponent,
     FooterComponent,
     ShopComponent,
+    ProductDetailsComponent,
+    AbputComponent,
 
   ],
   imports: [

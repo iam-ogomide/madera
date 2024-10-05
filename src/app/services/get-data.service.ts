@@ -41,7 +41,7 @@ export class GetDataService {
       pdImg: "../../assets/m1.png"
     },
     {
-      pdId: 1,
+      pdId: 2,
       pdName: "Modern sofa",
       pdPrice: 499,
       pdCategory: "Floor",
@@ -49,7 +49,7 @@ export class GetDataService {
       pdImg: "../../assets/m2.png"
     },
     {
-      pdId: 1,
+      pdId: 3,
       pdName: "Modern sofa",
       pdPrice: 114,
       pdCategory: "Led",
@@ -57,7 +57,7 @@ export class GetDataService {
       pdImg: "../../assets/m3.png"
     },
     {
-      pdId: 1,
+      pdId: 4,
       pdName: "Modern sofa",
       pdPrice: 119,
       pdCategory: "Modern",
@@ -65,7 +65,7 @@ export class GetDataService {
       pdImg: "../../assets/m4.png"
     },
     {
-      pdId: 1,
+      pdId: 5,
       pdName: "Modern sofa",
       pdPrice: 149,
       pdCategory: "Retro",
@@ -73,7 +73,7 @@ export class GetDataService {
       pdImg: "../../assets/m5.png"
     },
     {
-      pdId: 1,
+      pdId: 6,
       pdName: "Modern sofa",
       pdPrice: 235,
       pdCategory: "Wood",
@@ -81,7 +81,7 @@ export class GetDataService {
       pdImg: "../../assets/m6.png"
     },
     {
-      pdId: 1,
+      pdId: 7,
       pdName: "Modern sofa",
       pdPrice: 675,
       pdCategory: "Ceiling",
@@ -89,7 +89,7 @@ export class GetDataService {
       pdImg: "../../assets/m7.png"
     },
     {
-      pdId: 1,
+      pdId: 8,
       pdName: "Modern sofa",
       pdPrice: 156,
       pdCategory: "Retro",
@@ -97,7 +97,7 @@ export class GetDataService {
       pdImg: "../../assets/m8.png"
     },
     {
-      pdId: 1,
+      pdId: 9,
       pdName: "Modern sofa",
       pdPrice: 765,
       pdCategory: "Led",
@@ -105,7 +105,7 @@ export class GetDataService {
       pdImg: "../../assets/m9.png"
     },
     {
-      pdId: 1,
+      pdId: 10,
       pdName: "Modern sofa",
       pdPrice: 532,
       pdCategory: "Wood",
@@ -113,7 +113,7 @@ export class GetDataService {
       pdImg: "../../assets/m3.png"
     },
     {
-      pdId: 1,
+      pdId: 11,
       pdName: "Modern sofa",
       pdPrice: 257,
       pdCategory: "FLoor",
@@ -121,12 +121,35 @@ export class GetDataService {
       pdImg: "../../assets/m8.png"
     },
     {
-      pdId: 1,
+      pdId: 12,
       pdName: "Modern sofa",
       pdPrice: 467,
       pdCategory: "Ceiling",
       pdColor: 'Grey',
       pdImg: "../../assets/m2.png"
+    },
+  ]
+
+  aboutData = [
+    {
+      id: 1,
+      name: 'Shope online',
+      img: '../../assets/clock.png',
+    },
+    {
+      id: 2,
+      name: 'Free shipping',
+      img: '../../assets/bag.png',
+    },
+    {
+      id: 3,
+      name: 'Return policy',
+      img: '../../assets/card.png',
+    },
+    {
+      id: 4,
+      name: 'PAYMENT',
+      img: '../../assets/dollar.png',
     },
   ]
 }
